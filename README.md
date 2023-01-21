@@ -15,7 +15,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -28,7 +27,6 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 
@@ -71,14 +69,6 @@ this is the first interaction using Ruby on Rails, create an interact with the B
 - **Add Validates for the input values of the tables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](Woking on it)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -158,12 +148,11 @@ You can deploy this project using:
 ## 👥 Authors <a name="authors"></a>
 
 
-👤 **Cesar Alberto Valencia Aguilar**
+**Mohi**
 
-- GitHub: [@cvalencia1991](https://github.com/cvalencia1991)
-- Twitter: [@cvalenciaguilar](https://twitter.com/cvalenciaguilar)
-- LinkedIn: [@cvalencia1991](https://www.linkedin.com/in/cvalenciaguilar/)
-
+- GitHub: [@MahdiAghaali](https://github.com/MahdiAghaali)
+- Twitter: [@twitterhandle](https://twitter.com/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mahdi-aghaali/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -181,7 +170,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/cvalencia1991/BlogApp/issues).
+Feel free to check the [issues page](https://github.com/MahdiAghaali/blog-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -201,26 +190,11 @@ I would like to thank ruby on rails guide
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-## ❓ FAQ <a name="faq"></a>
-
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](https://github.com/MahdiAghaali/blog-app/blob/dev/LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
