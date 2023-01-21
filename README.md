@@ -2,7 +2,6 @@
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Blog App</b></h3>
@@ -16,6 +15,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -34,8 +34,6 @@
 
 # 📖 Hello world<a name="about-project"></a>
 
-
-
 this is the first interaction using Ruby on Rails, create an interact with the Blog Application
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -46,14 +44,14 @@ this is the first interaction using Ruby on Rails, create an interact with the B
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
 </details>
 
 <details>
 <summary>server</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">Ruby on Rails</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -66,14 +64,21 @@ this is the first interaction using Ruby on Rails, create an interact with the B
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **Add connection to the PostgreSQL**
-- **Create Tables and foreing Keys**
-- **using Migrate to create the databases**
+- **Interact the Connection With the PostgreSQL**
+- **Add Active Record and associations & queries in Methods**
+- **Implement Active Record in CRUD Terminal**
+- **Implement Testing for the Models**
+- **Add Validates for the input values of the tables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- GETTING STARTED -->
+
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](Woking on it)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -86,6 +91,7 @@ In order to run this project you need:
 
 ```sh
  gem install rails
+ bundle install
 ```
 
 
@@ -120,6 +126,7 @@ Example command:
 
 ```sh
   rails server or rails s
+  rails c
 ```
 
 
@@ -127,13 +134,13 @@ Example command:
 
 To run tests, run the following command:
 
-<!--
+
 Example command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec or rspec/file_rspec.rb
 ```
---->
+
 
 ### Deployment
 
@@ -142,47 +149,42 @@ You can deploy this project using:
 ```sh
  rails s
  rails db:migrate
+ rails c
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
-**Mohi**
+👤 **Cesar Alberto Valencia Aguilar**
 
-- GitHub: [@MahdiAghaali](https://github.com/MahdiAghaali)
-- Twitter: [@twitterhandle](https://twitter.com/)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mahdi-aghaali/)
+- GitHub: [@cvalencia1991](https://github.com/cvalencia1991)
+- Twitter: [@cvalenciaguilar](https://twitter.com/cvalenciaguilar)
+- LinkedIn: [@cvalencia1991](https://www.linkedin.com/in/cvalenciaguilar/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- Deploy in brower **Deploy the Project Using the squema of Ruby on Rails**
+- Add information in Database **You can interact with the Blog App interface**
+- Interact the User **The User can comment in real application of menu**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/cvalencia1991/BlogApp/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
@@ -200,10 +202,8 @@ I would like to thank ruby on rails guide
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 ## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **[Question_1]**
 
