@@ -1,11 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-
-  <br/>
-
-  <h3><b>Blog App</b></h3>
-
+  <h3><b>Rails Blog App</b></h3>
 </div>
 
 
@@ -38,27 +34,20 @@ this is the first interaction using Ruby on Rails, create an interact with the B
 
 ### Tech Stack <a name="tech-stack"></a>
 
-
-<details>
   <summary>Client</summary>
   <ul>
     <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
-</details>
 
-<details>
 <summary>server</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
-</details>
 
-<details>
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
-</details>
 
 ### Key Features <a name="key-features"></a>
 
@@ -92,7 +81,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/MahdiAghaali/blog-app
 ```
 
 
@@ -160,8 +149,8 @@ You can deploy this project using:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- Deploy in brower **Deploy the Project Using the squema of Ruby on Rails**
-- Add information in Database **You can interact with the Blog App interface**
+- Deploy in brower **Deploy the Project Using the schema of Ruby on Rails**
+- Add information in Database **You'll be able to interact with the Blog App interface**
 - Interact the User **The User can comment in real application of menu**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
