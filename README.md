@@ -26,7 +26,7 @@
 - [📝 License](#license)
 
 
-# 📖 Hello world<a name="about-project"></a>
+# 📖 Rails blog app<a name="about-project"></a>
 
 this is the first interaction using Ruby on Rails, create an interact with the Blog Application
 
