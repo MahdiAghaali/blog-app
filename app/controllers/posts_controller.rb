@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = post.all
+    @posts = Post.all
   end
 
   def show; end
