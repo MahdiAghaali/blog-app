@@ -1,8 +1,16 @@
 require 'rails_helper'
 RSpec.describe Post, type: :model do
   subject do
-    Post.create(id: 11, user_id: 3, title: 'Hello', text: 'This is my first post',
-                comments_counter: 1, likes_counter: 1)
+    Post.create(id: 11, authorid: 3, title: 'Hello', text: 'This is my first post',
+<<<<<<< HEAD
+<<<<<<< HEAD
+                comments_counter: 1, likescounter: 1)
+=======
+                commentscounter: 1, likescounter: 1)
+>>>>>>> parent of a6bb258 (Merge pull request #5 from MahdiAghaali/feature/routes)
+=======
+                commentscounter: 1, likescounter: 1)
+>>>>>>> parent of a6bb258 (Merge pull request #5 from MahdiAghaali/feature/routes)
   end
   before { subject.save }
 
@@ -17,11 +25,11 @@ RSpec.describe Post, type: :model do
   end
 
   it 'Post counter be greater than 0' do
-    expect(subject.comments_counter).to_not be_nil
+    expect(subject.commentscounter).to_not be_nil
   end
 
   it 'Likecounter greather than 0' do
-    subject.likes_counter = 'alfa'
+    subject.likescounter = 'alfa'
     expect(subject).to_not be_valid
   end
 end
