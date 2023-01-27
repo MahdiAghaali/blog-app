@@ -82,9 +82,15 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
 <<<<<<< HEAD
+<<<<<<< HEAD
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+=======
+  gem "capybara"
+  gem "selenium-webdriver"
+  gem "webdrivers"
+>>>>>>> parent of a6bb258 (Merge pull request #5 from MahdiAghaali/feature/routes)
 =======
   gem "capybara"
   gem "selenium-webdriver"
