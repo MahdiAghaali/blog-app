@@ -2,7 +2,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   subject do
     Post.create(id: 11, authorid: 3, title: 'Hello', text: 'This is my first post',
-                commentscounter: 1, likescounter: 1)
+                comments_counter: 1, likescounter: 1)
   end
   before { subject.save }
 
@@ -17,7 +17,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'Post counter be greater than 0' do
-    expect(subject.commentscounter).to_not be_nil
+    expect(subject.comments_counter).to_not be_nil
   end
 
   it 'Likecounter greather than 0' do
