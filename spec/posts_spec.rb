@@ -1,8 +1,8 @@
 require 'rails_helper'
 RSpec.describe Post, type: :model do
   subject do
-    Post.create(id: 11, authorid: 3, title: 'Hello', text: 'This is my first post',
-                comments_counter: 1, likescounter: 1)
+    Post.create(id: 11, user_id: 3, title: 'Hello', text: 'This is my first post',
+                comments_counter: 1, likes_counter: 1)
   end
   before { subject.save }
 
@@ -21,7 +21,7 @@ RSpec.describe Post, type: :model do
   end
 
   it 'Likecounter greather than 0' do
-    subject.likescounter = 'alfa'
+    subject.likes_counter = 'alfa'
     expect(subject).to_not be_valid
   end
 end
