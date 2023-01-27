@@ -2,15 +2,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   subject do
     Post.create(id: 11, authorid: 3, title: 'Hello', text: 'This is my first post',
-<<<<<<< HEAD
-<<<<<<< HEAD
                 comments_counter: 1, likescounter: 1)
-=======
-                commentscounter: 1, likescounter: 1)
->>>>>>> parent of a6bb258 (Merge pull request #5 from MahdiAghaali/feature/routes)
-=======
-                commentscounter: 1, likescounter: 1)
->>>>>>> parent of a6bb258 (Merge pull request #5 from MahdiAghaali/feature/routes)
   end
   before { subject.save }
 
