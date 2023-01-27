@@ -7,7 +7,11 @@ class Comment < ApplicationRecord
   def upadate_comments
     counter = Comment.count('postid')
 <<<<<<< HEAD
+<<<<<<< HEAD
     Post.update(comments_counter: counter)
+=======
+    Post.update(commentscounter: counter)
+>>>>>>> parent of a6bb258 (Merge pull request #5 from MahdiAghaali/feature/routes)
 =======
     Post.update(commentscounter: counter)
 >>>>>>> parent of a6bb258 (Merge pull request #5 from MahdiAghaali/feature/routes)
