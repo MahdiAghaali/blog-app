@@ -30,4 +30,4 @@ RSpec.describe PostsController, type: :request do
       expect(response.body).to include('This is a place holder to show a post')
     end
   end
-  
+end

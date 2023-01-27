@@ -30,4 +30,4 @@ RSpec.describe UsersController, type: :request do
       expect(response.body).to include('This is a place holder to show a user')
     end
   end
-  
+end
