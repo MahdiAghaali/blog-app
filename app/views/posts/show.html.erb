@@ -1,1 +1,8 @@
-<h1>This is a place holder to show a post</h1>
+<section class="full_post_container">
+  <%= render partial: 'shared/post', locals: { post: @post, show_full_post: true } %>
+  <div class="full_comments_container">
+    <% @post.comments.each do |comment| %>
+      <%= render partial: 'shared/comment', locals: { comment: comment } %>
+    <% end %>
+  </div>
+</section>
