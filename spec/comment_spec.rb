@@ -1,15 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  subject { Comment.create(user_id: 3, post_id: 9, text: 'Hi Tom!') }
-  before { subject.save }
-
-  it 'post_id not to be string' do
-    subject.post_id = 'alfa'
-    expect(subject).to_not be_valid
+  subject do
+    Comment.create(id: 1, text: 'Text', post_id: 1, author_id: 1)
   end
 
-  it 'post_id not to be strings' do
-    expect(subject.post_id).to_not be_nil
+  before { subject.save }
+
+  describe 'Validations' do
+    it 'is not valid without text' do
+      subject.text = nil
+      expect(subject).to_not be_valid
+    end
   end
 end
