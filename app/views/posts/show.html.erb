@@ -1,25 +1,10 @@
-<div class="show-post">
-    <div class="show-post-user">
-    <div>
-      <h2>
-      Post #<%= @posts.find_index(@post) +1 %> by:   <%= @post.user.name%>
-      </h2>
-      <p>Comments: <%=@post.comments_counter.to_i%> Likes: <%=@post.likes_counter.to_i%></p>
-    </div>
-    <p><%=@post.text%></p>
-    </div>
-    <div class="<%= comments?(@post)%> user-comments">
-            <% @post.comments.each do |comment|%>
-                <p>
-                    <%=comment.user.name%> :
-                    <%= comment.text%>
-                </p>
-            <%end%>
-    </div>
-
-</div>
-
-<div>
-<%= render partial: 'comments/form'%>
-<%= render partial: 'likes/form'%>
-</div>
+<section class="full_post_container">
+  <%= render partial: "shared/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author.id } %>
+  <%= render partial: 'shared/post', locals: { post: @post, show_full_post: true } %>
+  <div class="full_comments_container">
+    <% @post.comments.each do |comment| %>
+      <%= render partial: 'shared/comment', locals: { comment: comment } %>
+    <% end %>
+  </div>
+  <button type="button" class="create_post_btn btn"><%= link_to "Add a new comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id) %></button>
+</section>
