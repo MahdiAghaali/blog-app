@@ -1,22 +1,35 @@
 require 'rails_helper'
+
 RSpec.describe User, type: :model do
   subject do
-    User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                bio: 'Teacher from Mexico.', post_counter: 0)
+    User.create(id: 1, name: 'Name', photo: 'Photo', bio: 'Bio')
   end
+
   before { subject.save }
 
-  it 'name not be empty' do
-    subject.name = nil
-    expect(subject).to_not be_valid
-  end
+  describe 'Validations' do
+    it 'is not valid without a name' do
+      subject.name = nil
+      expect(subject).to_not be_valid
+    end
 
-  it 'name is not be empty' do
-    expect(subject.name).to_not be_nil
-  end
+    it 'is valid with valid attributes' do
+      expect(subject).to be_valid
+    end
 
-  it 'postcounter not have to be bigger than 0' do
-    subject.post_counter = 'alfa'
-    expect(subject).to_not be_valid
+    it 'post_counter have to be bigger than 0' do
+      subject.posts_counter = -1
+      expect(subject).to_not be_valid
+    end
+
+    it 'post_counter have to be greater or iqual to zero' do
+      subject.posts_counter = 0
+      expect(subject).to be_valid
+    end
+
+    it 'latest_posts method should return the last 3 posts' do
+      4.times { Post.create(title: 'Title', text: 'Text', author_id: subject.id) }
+      expect(subject.latest_posts.count).to eq(3)
+    end
   end
 end
