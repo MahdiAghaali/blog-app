@@ -2,11 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'User', type: :system do
   describe 'index page' do
-    before :all do
+    before :each do
       @user = User.create(name: 'Tom',
                           bio: 'Teacher from Mexico.',
                           photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                          posts_counter: 0)
+                          postsCounter: 0)
       visit '/users'
     end
     it 'shows the username of all users' do
@@ -18,12 +18,12 @@ RSpec.describe 'User', type: :system do
     end
 
     it 'shows the number of posts each user has written' do
-      expect(page).to have_content("Number of posts: #{@user.posts_counter}")
+      expect(page).to have_content("Number of posts: #{@user.postsCounter}")
     end
 
     it 'click on a user and I am redirected to that users show page' do
       click_on(@user.name, match: :first)
-      expect(page).to have_current_path('/users/187')
+      expect(page).to have_current_path("/users/#{@user.id}")
     end
   end
 end

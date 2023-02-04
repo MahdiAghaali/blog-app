@@ -2,16 +2,16 @@ require 'rails_helper'
 
 RSpec.describe 'Post', type: :system do
   describe 'index page' do
-    before :all do
+    before :each do
       @user = User.create(name: 'Tom',
                           bio: 'Teacher from Mexico.',
                           photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                          posts_counter: 0)
+                          postsCounter: 0)
 
       @post = Post.create(title: 'Hello',
                           text: 'This is my first post',
-                          comments_counter: 0,
-                          likes_counter: 0,
+                          commentsCounter: 0,
+                          likesCounter: 0,
                           author: @user)
 
       visit "/users/#{@user.id}/posts"
@@ -26,7 +26,7 @@ RSpec.describe 'Post', type: :system do
     end
 
     it 'shows the number of posts the user has written' do
-      expect(page).to have_content("Number of posts: #{@user.posts_counter}")
+      expect(page).to have_content("Number of posts: #{@user.postsCounter}")
     end
 
     it 'shows the post title' do
@@ -45,11 +45,11 @@ RSpec.describe 'Post', type: :system do
     end
 
     it 'shows the number of comments of a post' do
-      expect(page).to have_content(@post.comments_counter)
+      expect(page).to have_content(@post.commentsCounter)
     end
 
     it 'shows how many likes a post have' do
-      expect(page).to have_content(@post.likes_counter)
+      expect(page).to have_content(@post.likesCounter)
     end
 
     it 'show a section of pagination' do
