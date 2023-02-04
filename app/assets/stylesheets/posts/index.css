@@ -1,0 +1,17 @@
+.posts-list {
+  padding: 0;
+}
+
+.posts-list li {
+  margin-bottom: 35px;
+}
+
+.comments-box {
+  border: solid 2.5px black;
+  padding: 10px;
+  width: 470px;
+}
+
+.comments-box h4 {
+  margin: 5px;
+}

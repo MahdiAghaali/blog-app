@@ -1,0 +1,17 @@
+.user-bio {
+  border: solid 2.5px black;
+  padding: 10px;
+  width: 470px;
+}
+
+.user-bio h3 {
+  margin-top: 0;
+}
+
+.thre-posts-list {
+  padding: 0;
+}
+
+.all-posts-button {
+  margin-left: 170px;
+}

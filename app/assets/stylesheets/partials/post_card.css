@@ -1,0 +1,17 @@
+.post-card {
+  border: solid 2.5px black;
+  margin: 5px;
+  margin-left: 0;
+  padding: 10px;
+  width: 470px;
+}
+
+.post-card h3 {
+  margin-top: 0;
+}
+
+.post-card h5 {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0;
+}

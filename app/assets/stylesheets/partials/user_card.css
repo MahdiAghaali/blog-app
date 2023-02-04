@@ -1,0 +1,31 @@
+.user-card {
+  display: flex;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  word-break: break-all;
+  border: solid 2.5px black;
+  padding: 5px;
+}
+
+.user-information {
+  display: flex;
+  border: solid 2.5px black;
+  margin: 25px;
+  width: 350px;
+}
+
+.user-name {
+  align-items: center;
+  padding: 10px;
+}
+
+.user-number-of-posts {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding-right: 10px;
+}

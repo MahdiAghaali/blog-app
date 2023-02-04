@@ -1,5 +1,7 @@
-<section class="all_users_container">
-  <div>
-    <%= render partial: "shared/user", collection: @users, as: :user || ">No users found" %>
-  </div>
-</section> 
+<ul class='user-list'>
+  <% @users.each do |user| %>
+    <%= link_to user_path(user.id) do %>
+      <li><%= render 'partials/user_card', user: user %></li>
+    <% end %>
+  <% end %>
+</ul>

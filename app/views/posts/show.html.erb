@@ -1,10 +1,23 @@
-<section class="full_post_container">
-  <%= render partial: "shared/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author.id } %>
-  <%= render partial: 'shared/post', locals: { post: @post, show_full_post: true } %>
-  <div class="full_comments_container">
-    <% @post.comments.each do |comment| %>
-      <%= render partial: 'shared/comment', locals: { comment: comment } %>
+<div class='post'>
+  <div class='post-header'>
+    <h3><%= @post.title %> by <%= @user.name %></h3>
+    <h5>Comments: <%= @post.commentsCounter %>, Likes: <%= @post.likesCounter %></h5>
+  </div>
+  <h3><%= @post.text %></h3>
+</div>
+<% if @post.commentsCounter > 0 %>
+  <div class='post-comments'>
+    <% @comments = Comment.where(post_id: @post.id) %>
+    <% @comments.each do |comment| %>
+      <% @users = User.where(id: comment.author_id) %>
+      <% @users.each do |user| %>
+        <h4><%= user.name %>: <%= comment.text %></h4>
+      <% end %>
     <% end %>
   </div>
-  <button type="button" class="create_post_btn btn"><%= link_to "Add a new comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id) %></button>
-</section>
+<% else %>
+  <div class='post-comments'>No comments yet</div>
+<% end %>
+<%= form_with model: Like, url: user_post_likes_path(@user, @post) do |f| %>
+  <%= f.submit "Add like!" %>
+<% end %>

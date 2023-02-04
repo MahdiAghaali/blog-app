@@ -1,0 +1,25 @@
+.post {
+  border: solid 2.5px black;
+  width: 450px;
+  padding: 10px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-header h3,
+h5 {
+  margin-top: 0;
+}
+
+.post-comments {
+  border: solid 2.5px black;
+  width: 470px;
+  margin-top: 5px;
+}
+
+.post-comments h4 {
+  margin: 5px;
+}

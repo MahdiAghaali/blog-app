@@ -1,17 +1,13 @@
-<section class="single_users_container">
-  <%= render partial: "shared/user", locals: {user: @user || "No users found"} %>
-
-  <div class="user_bio">
-    <h3>Bio</h3>
-    <p><%= @user.bio %></p>
-  </div>
-
-  <% @recent_posts.each do |post| %>
-    <%= render partial: 'shared/post', locals: { post: post, show_full_post: false } %>
+<%= render 'partials/user_card', user: @user %>
+<div class='user-bio'>
+  <h3>Bio</h3>
+  <h3><%= @user.bio %></h3>
+</div>
+<ul class='thre-posts-list'>
+  <% @posts.each_with_index do |post, index| %>
+    <li><%= render 'partials/post_card', post: post, index: index %></li>
   <% end %>
-
-  <div class="btn_container">
-    <button type="button" class="btn"><%= link_to "See all posts", user_posts_path(@user) %></button> 
-    <button type="button" class="create_post_btn btn"><%= link_to "Create Post", new_user_post_path(@user) %></button>
-  </div>
-</section> 
+</ul>
+<%= link_to user_posts_path(@user) do %>
+  <button class='all-posts-button'>See all posts</button>
+<% end %>

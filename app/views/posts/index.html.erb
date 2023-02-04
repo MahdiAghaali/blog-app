@@ -1,14 +1,25 @@
-<section class="all_posts_container">
-  <%= render partial: "shared/user", locals: {user: @user || "No users found"} %>
+<%= render 'partials/user_card', user: @user %>
+<ul class='posts-list'>
   <% @posts.each do |post| %>
-    <%= link_to user_post_path(user_id: post.author.id, id: post.id), class: "post_partial" do %>
-  <%= render partial: 'shared/post', locals: { post: post, show_full_post: false } %>
+    <li>
+      <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
+        <%= render 'partials/post_card', post: post %>
+      <% end %>
+      <% if post.commentsCounter > 0 %>
+        <div class='comments-box'>
+          <% @comments = post.five_most_recent_comments %>
+          <% @comments.each do |comment| %>
+            <% @users = User.where(id: comment.author_id) %>
+            <% @users.each do |user| %>
+              <h4><%= user.name %>: <%= comment.text %></h4>
+            <% end %>
+          <% end %>
+        </div>
+      <% else %>
+        <div class='comments-box'>No comments yet</div>
+      <% end %>
+    </li>
   <% end %>
-  <div class="recent_comments_container">
-    <% post.recent_comments.each do |comment| %>
-      <%= render partial: 'shared/comment', locals: { comment: comment } %>
-    <% end %>
-  </div>
-  <% end %>
-  <button type="button" class="btn">Pagination</button> 
-</section>
+</ul>
+<button class='pagination-button'>Pagination</button>
+
